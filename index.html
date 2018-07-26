@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400|Source+Sans+Pro:600,700" rel="stylesheet">
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header>
+	<h1 class="logo">Touris<span>m.</span></h1>
+</header>
+<section id="intro">
+	<h2>Explore the</h2>
+	<h1>deep forest</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</section>
+<section id="gallery">
+	<h1>Gallery</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim, felis quis molestie sollicitudin, orci quam tincidunt diam, id rutrum dui urna sit amet quam. </p>
+	<img src="./media/nature.png" alt="nature">
+</section>
+<aside id="banner">
+	<img src="./media/Layer30.png" alt="bridge into a forest">
+</aside>
+<section id="genericBackgroundSection">
+	<h1 class="boxedHeader">Lorem ipsum</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</section>
+<section id="statistics">
+	<h1>Statistics</h1>
+	<h2>Did you know?</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet suscipit leo. Sed lectus odio, accumsan vitae suscipit in, posuere et orci. Nunc a feugiat arcu. Proin fringilla lectus non finibus malesuada. In in nulla augue. Integer id lacus ultrices, pharetra tellus a, pulvinar lorem. Pellentesque quis pretium nulla, sit amet efficitur justo. Morbi luctus vehicula diam, vitae facilisis libero ultrices eu.</p>
+	<div>
+		<div>
+			<span>2000</span>
+			<span>Lorem ipsum</span>
+		</div>
+		<div>
+			<span>23</span>
+			<span>Lorem ipsum</span>
+		</div>
+		<div>
+			<span>19382</span>
+			<span>Lorem ipsum</span>
+		</div>
+		<div>
+			<span>120</span>
+			<span>Lorem ipsum</span>
+		</div>
+	</div>
+</section>
+<section id="video">
+	<h1 class="boxedHeader">Lorem ipsum</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	<div class="videoFrame">
+		<iframe width="780" height="440" src="https://www.youtube-nocookie.com/embed/HyfVbJ4X_fA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+</section>
+<footer>
+	<h1 class="logo">Touris<span>m.</span></h1>
+</footer>
+
+
+
+<img src="./media/template.png" alt="template" id="template">
+<feildset id="tempSet">
+	<label for="opacity">Template Opacity</label>
+	<input type="range" name="opacity" id="opacity" min="0" max="1" step="0.01"/>
+</feildset>
+<style>
+	#template {
+		display: block;
+		z-index: 10000;
+		position: absolute;
+		top: 0;
+		right: calc(50% - 700px);
+		left:  calc(50% - 700px);
+		opacity: .5;
+	}
+	#tempSet {
+		position: fixed;
+		bottom: 5px;
+		right: 5px;
+		background: rgba(255,255,255,.2);
+		border-radius: 100rem;
+		border: 1px solid rgba(0,0,0,.2);
+		padding: .5rem .25rem .25rem .5rem;
+		z-index: 1000000;
+	}
+	#tempSet > input {
+		vertical-align: middle;
+	}
+</style>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		document.querySelector('#opacity').onchange=function (event) {
+			if (event.target.value < 0.05) {
+				document.querySelector("#template").style.display="none";
+			} else {
+				document.querySelector("#template").style.display="block";
+			}
+			document.querySelector("#template").style.opacity = event.target.value;
+		};
+	}, false);
+</script>
+</body>
+</html>
