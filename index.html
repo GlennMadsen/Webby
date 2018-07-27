@@ -67,17 +67,17 @@
 <img src="./media/template.png" alt="template" id="template">
 <feildset id="tempSet">
 	<label for="opacity">Template Opacity</label>
-	<input type="range" name="opacity" id="opacity" min="0" max="1" step="0.01"/>
+	<input type="range" name="opacity" id="opacity" min="0" max="1" step="0.01" value="0"/>
 </feildset>
 <style>
 	#template {
-		display: block;
+		display: none;
 		z-index: 10000;
 		position: absolute;
 		top: 0;
 		right: calc(50% - 700px);
 		left:  calc(50% - 700px);
-		opacity: .5;
+		opacity: 0;
 	}
 	#tempSet {
 		position: fixed;
